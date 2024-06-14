@@ -1,0 +1,10 @@
+databaseChangeLog:
+
+  - include:
+      file: db/changelog/0001_ddl_create_loan.xml
+  - include:
+      file: db/changelog/0002_ddl_create_customer.xml
+  - include:
+      file: db/changelog/0003_ddl_create_account.xml
+  - include:
+      file: db/changelog/0004_ddl_create_product.xml

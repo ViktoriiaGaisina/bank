@@ -1,0 +1,15 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet id="0001_ddl_create_loan" author="Vika">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists  tableName="loan"/>
+            </not>
+        </preConditions>
+        <sqlFile dbms="postgresql"
+                 path="db/changelog/sql/0001_ddl_create_loan_table.sql"/>
+        <rollback>
+            <dropTable tableName="loan"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
