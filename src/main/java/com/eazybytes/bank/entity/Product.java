@@ -1,19 +1,20 @@
 package com.eazybytes.bank.entity;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import lombok.*;
 
 import java.math.BigDecimal;
+
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Product {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private String productKey;
     private String description;
